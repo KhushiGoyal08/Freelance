@@ -19,16 +19,27 @@ class MyWeatherApp extends StatelessWidget {
                     top: MediaQuery.of(context).size.height * 0.35),
                 child: Column(
                   children: [
-                    if (controller.isLoading.value) CircularProgressIndicator(),
-                    Text(
-                      '${controller.temperature.value}°C',
-                      style: GoogleFonts.poppins(fontSize: 24),
-                    ),
-                    Text(
-                      ' ${controller.description.value}',
-                      style: GoogleFonts.poppins(
-                          fontSize: 24,
-                          color: const Color.fromRGBO(80, 84, 93, 1)),
+                    if (controller.isLoading.value) const  CircularProgressIndicator(),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const  Image(image: AssetImage('assets/cloud_sun.png'),),
+                        Column(
+                          children: [
+                            Text(
+                              '${controller.temperature.value}°C',
+                              style: GoogleFonts.poppins(fontSize: 24),
+                            ),
+                            Text(
+                              ' ${controller.description.value}',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 24,
+                                  color: const Color.fromRGBO(80, 84, 93, 1)),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),

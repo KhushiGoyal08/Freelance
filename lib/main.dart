@@ -1,5 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:freelance/pages/weatherapi/patientVisitPage.dart';
 import 'package:freelance/pages/weatherapi/weatherpage.dart';
 import 'package:get/get.dart';
 import 'pages/weatherapi/bottommodelsheet.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyBottomSheet(),
+      home: PatientVisitPage(),
     );
   }
 }
